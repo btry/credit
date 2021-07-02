@@ -160,8 +160,6 @@ class PluginCreditTicket extends CommonDBTM {
     * @param $ticket Ticket object
    **/
    static function showForTicket(Ticket $ticket) {
-      global $DB, $CFG_GLPI;
-
       $ID = $ticket->getField('id');
       if (!$ticket->can($ID, READ)) {
          return false;
